@@ -1,0 +1,69 @@
+body {
+    font-family: sans-serif;
+    width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 90px 450px 50px 225px 225px 50px;
+    grid-template-areas:
+        "logo .    nav nav"
+        "head head head head"
+        "titl .    titl2 ."
+        "blog1 blog1 prod1 prod2"
+        "blog2 blog2 prod3 prod4"
+        "foot foot foot foot";            
+}
+div, nav ul, header, section, footer, h1 {
+    background: silver;
+}
+#logo {
+    grid-area: logo;
+}
+nav {
+    grid-area: nav;
+    align-self: center;
+}
+nav ul {
+    list-style-type: none;
+    justify-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 50px;
+    grid-gap: 20px;
+    grid-template: auto / repeat(4, 1fr);
+}
+header {
+    grid-area: head;
+    padding: 50px;
+}
+#title1 {
+    grid-area: titl;
+}
+#title2 {
+    grid-area: titl2;
+}
+#blog1 {
+    grid-area: blog1;
+}
+#prod1 {
+    grid-area: prod1;
+}
+#prod2 {
+    grid-area: prod2;
+}
+#blog2 {
+    grid-area: blog2;
+}
+#prod3 {
+    grid-area: prod3;
+}
+#prod4 {
+    grid-area: prod4;
+}
+footer {
+    grid-area: foot;
+    text-align: center;
+}

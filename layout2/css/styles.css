@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    display: grid;
+    max-width: 1000px;
+    grid-gap: 20px;
+    margin: 20px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 90px 200px auto 50px;
+    grid-template-areas:
+        "logo .    nav  nav"
+        "head head head head"
+        "gal gal gal gal"
+        "foot foot foot foot";
+}
+div, nav ul, section, footer {
+    background: silver;
+}
+header {
+    grid-area: head;
+}
+nav {
+    grid-area: nav;
+    align-self: center;
+}
+nav ul {
+    list-style-type: none;
+    display: grid;
+    height: 50px;
+    grid-template: auto / repeat(4, 1fr);
+    justify-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+main {
+    grid-area: gal;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: repeat(3, 170px) / repeat(3, 1fr);
+}
+
+footer {
+    grid-area: foot;
+    align-content: center;
+    text-align: center;			
+}
